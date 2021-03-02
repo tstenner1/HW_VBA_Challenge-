@@ -14,20 +14,20 @@ Sub Multiple_year_stock_data()
             ws.Cells(1, 12) = "Total Stock Volume"
     
     Next
-        
+        Dim Open_Price As Double
+        Dim Close_Price As Double
+        Dim Delta_Percent As Double
+        Dim Delta_Price As Double
         Dim Ticker As String
         Ticker = " "
         
-        Dim Total_Ticker_Volume As Double
-        Total_Ticker_Volume = 0
+        Dim Total_Stock_Volume As Double
+        Total_Stock_Volume = 0
         
-        Dim Open_Price As Double
+        
         Open_Price = 0
-        Dim Close_Price As Double
         Close_Price = 0
-        Dim Delta_Price As Double
         Delta_Price = 0
-        Dim Delta_Percent As Double
         Delta_Percent = 0
        
          
@@ -64,7 +64,7 @@ Sub Multiple_year_stock_data()
                 End If
                 
                 
-                Total_Ticker_Volume = Total_Ticker_Volume + ws.Cells(i, 7)
+                Total_Stock_Volume = Total_Stock_Volume + ws.Cells(i, 7)
               
 
                 ws.Range("i" & summary_table_row) = Ticker_Name
@@ -77,18 +77,15 @@ Sub Multiple_year_stock_data()
                    
                     ws.Range("J" & summary_table_row).Interior.ColorIndex = 3
                 End If
-                
+                -https://www.automateexcel.com/excel-formatting/color-reference-for-color-index/
                  
                 ws.Range("K" & summary_table_row) = (CStr(Delta_Percent) & "%")
                 
-                ws.Range("L" & summary_table_row) = Total_Ticker_Volume
+                ws.Range("L" & summary_table_row) = Total_Stock_Volume
                 
                
                 summary_table_row = summary_table_row + 1
                 
-                Delta_Price = 0
-                
-                Close_Price = 0
                 
                 Open_Price = ws.Cells(i + 1, 3)
     
