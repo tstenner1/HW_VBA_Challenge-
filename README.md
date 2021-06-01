@@ -1,14 +1,10 @@
 # VBA 
 
-Below is a trimmed down readme highlighting the specific skills executed in this assignment.
+In this repository I use VBA scripting to analyze real stock market data. 
 
-## Background
+## VBA Execution 
 
-Use VBA scripting to analyze real stock market data. 
-
-## Instructions
-
-* Create a script that will loop through all the stocks for one year and output the following information.
+* I created a script that looped through all the stocks for one year and output the following information.
 
   * The ticker symbol.
 
@@ -18,7 +14,7 @@ Use VBA scripting to analyze real stock market data.
 
   * The total stock volume of the stock.
 
-* You should also have conditional formatting that will highlight positive change in green and negative change in red.
+* Conditional formatting was key to highlight positive change in green and negative change in red.
 
 
 ### Copyright
